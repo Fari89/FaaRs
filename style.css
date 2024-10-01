@@ -1,0 +1,819 @@
+:root {
+    --primary: #ff9900;
+    --background: #000000;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url(backgroundanimasi.mp4);
+    background-color: #000000;
+    background-size: cover;
+    color: #fff;
+    
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    border-bottom: 2px solid #afafaf00;
+    background-color: #00000000;
+    transition: top 0.3s; /* Menambahkan transisi untuk efek halus */
+}
+
+.navbar.hidden {
+    top: -100px; /* Menggeser navbar ke atas untuk menyembunyikannya */
+}
+
+
+
+.navbar .navbar-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    font-style: italic;
+    margin-left: 1px;
+    margin-right: 1000px;
+    
+    align-items: start;
+}
+
+.navbar .navbar-logo span {
+    color: var(--primary);
+}
+
+.navbar-nav a {
+    
+   
+    color: #fff;
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 0 1rem;
+    justify-content: flex;
+    align-self: center;
+   
+}
+
+
+.navbar .navbar-nav a:hover {
+    color:  var(--primar);
+}
+ 
+.navbar .navbar-nav a::after{
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+
+}
+
+
+
+
+
+/*hamburger*/
+.navbar-extra a {
+
+    color: #fff;
+    margin: 0 0.5rem;
+    margin-top: 2rem;
+    margin-left: 40rem ;
+    cursor: pointer;
+    position: fixed;
+
+}
+
+.navbar-extra a:hover {
+    color:  var(--primary);
+}
+#hamburger-menu {
+    display: none;
+}
+
+/*Hero section*/
+.hero{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('js/cm.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 28%;
+    bottom: 0;
+  
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.hero .contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 500;
+  
+
+}
+.contents a{
+    text-align: start;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: -1rem;
+    margin-right:  30rem;
+}
+
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: rgba(0, 0, 0, 0); }
+}
+
+.hero  .content1 h1 {
+    align-items: center;
+    font-size: 10em;
+    margin-right: 50rem;
+    line-height: 1;
+    letter-spacing: -0.5em;
+    color: #ffffff;
+    overflow: hidden; /* Ensures the content is not revealed until the animation starts */
+    border-right: .15em solid rgba(0, 0, 0, 0); /* The typewriter cursor */
+    white-space: nowrap; /* Keeps the text on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjusts the spacing between characters */
+    animation: typing 1s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+.hero .contents {
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1rem 0;
+    line-height: 1;
+    overflow: hidden; /* Ensures the content is not revealed until the animation starts */
+    border-right: .15em solid rgba(0, 0, 0, 0); /* The typewriter cursor */
+    white-space: nowrap; /* Keeps the text on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjusts the spacing between characters */
+    animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
+   
+}
+.hero  .content1 p{
+    text-align: center;
+    overflow: hidden; /* Ensures the content is not revealed until the animation starts */
+    border-right: .15em solid rgba(0, 0, 0, 0); /* The typewriter cursor */
+    white-space: nowrap; /* Keeps the text on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjusts the spacing between characters */
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+
+}
+
+
+
+.contact .row form{
+    flex: 1 1 40rem;
+    padding: 1rem 1rem;
+    text-align: center;
+   
+
+}
+.contact button a:hover{
+    background-color: #ff9900;
+
+}
+
+.contact .row form .input-group {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    background-color: var(--background);
+    border: 1px solid #eee;
+    padding-left: 2rem;
+
+}
+.contact .row form .input-group input{
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.7rem;
+    background: none;
+    color: #fff;
+}
+.contact .row form .btn {
+    margin-top: 3rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background-color: var(--background);
+    border: 1px solid#fff;
+    cursor: pointer;
+
+}
+
+/*footer*/
+footer {
+    text-align: center;
+    padding: 1rem 0 3rem;
+    margin-top: 3rem;
+}
+
+footer .socials1{
+    padding: 1rem 0;
+}
+
+footer .socials1 a {
+    color: #ffffff;
+    margin: 1rem;
+}
+footer .socials1 a:hover {
+    color: var(--primary)
+}
+footer .credit a{
+    color: #ffffff;
+    font-weight: 400;
+
+
+}
+.footer ,.credit a:hover{
+    color: var(--primary)
+}
+/*Media Queris*/
+/*about section*/
+.about{
+    margin-top: -100rem;
+    padding: 8rem 7% 1.4rem;
+}
+.menu {
+    padding: 8rem 7% 1.4rem;
+}
+@media (min-width: 1024px) {
+    .about {
+    text-align: start;
+      padding: 40px;
+      margin-top: -60rem;
+      margin-left: 6rem;
+      margin-right: 60rem;
+
+    }
+    @media (min-width: 1024px) {
+        .profile {
+        text-align: end;
+          padding: 40px;
+          margin-top: -36em;
+          margin-left: 60rem;
+          margin-right: 6rem;
+    
+        }
+    }
+
+    @media (max-width: 767px) {
+        .about {
+      text-align: start;
+      padding: 40px;
+      margin-top: -60rem;
+      margin-left: 6rem;
+          
+        }
+    }
+}
+.about h2{
+    text-align: start;
+    font-size: 2.6rem;
+   margin-top: 1em; 
+   margin-bottom: 0.5rem;  
+   color:#ffffff ;
+   
+}
+.about h3{
+    text-align: start;
+    font-size: 2.6rem;
+    margin-top: 3rem;
+}
+@media (max-width: 767px) {
+    .content h3 {
+  text-align: start;
+  font-size: small;
+      
+    }
+}
+.menu h2 {
+    text-align: center;
+    font-size: 2.6rem;
+    margin-left: 1rem; 
+    margin-bottom: -1rem;
+
+}
+.menu h3{
+    margin-left: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: -1rem;
+    text-align: center;
+    margin-top: 1rem;
+    
+}
+.menu p{
+    text-align: start;
+    max-width: 300rem;
+    font-weight: 100;
+    line-height: 1.6;
+}
+.menu .row {
+    display: flex;           
+    flex-wrap: wrap;        
+    margin-top: 5rem;        
+    justify-content: center; 
+}
+
+.menu-card {
+    text-align: center;   
+}
+
+.menu .row .menu-card img {
+    border-radius: 50%;
+    width: 80%;
+
+}
+.menu .row .menu-card-title {
+    margin-top: 1.5rem auto 1rem;
+
+}
+.row .map {
+    display: none;
+    text-align: right;
+}
+/*Cotact*/
+.contact .row {
+    display: flex;
+    margin-top: 2rem;
+    background-color: #00000000;    
+}
+
+
+.contact .row .map {
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+.content1 p{
+    text-align: center;
+    margin-left: 10rem;
+}
+
+
+
+/*Deskop*/
+@media (max-width: 1366px){
+    html {
+        font-size: 75%;
+    }
+}
+/*Ipad*/
+@media (max-width: 758px) {
+    html {
+        font-size: 62.5%;
+    }
+    #hamburger-menu {
+        display: inline-block; 
+    }
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #fff;
+        width: 30rem;
+        height: 100vh;
+        transition: right 0.3s ease; 
+    }
+    .navbar .navbar-nav.active {
+        right: 0; 
+    }
+    .navbar .navbar-nav a {
+        color: var(--primary);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+}
+.navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+
+}
+.menu .p {
+    font-size: 1.5rem;
+}
+.contact .row {
+    flex-wrap: wrap;
+}
+.contact .row .map{
+    height: 40rem;
+}
+.contact .row form{
+    padding-top: 0;
+}
+.navbar .navbar-nav a:hover::after{
+transform: scaleX(0.2);
+}
+/*Mobile Phone*/
+@media (max-width: 450px){
+    html {
+        font-size: 55%;
+    }
+}
+
+.socials {
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 15px;
+    cursor: pointer;
+    margin-left: 5rem;
+    margin-bottom: 5rem;
+    cursor: pointer;
+    justify-content: space-between;
+    transition: bottom 0.3s;
+    
+}
+.socials.hidden {
+    bottom: -100px; /* Menggeser elemen socials ke bawah untuk menyembunyikannya */
+}
+.socials a:hover{
+    color: var(--primary)
+
+}
+
+.socials a {
+    display: none;
+    margin: 10px 0;
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+    display: flex;
+    
+}
+
+.socials i {
+    font-size: 24px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.bottom {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.349);
+  }
+  
+  .bottom a {
+    position: fixed;
+    align-items: end;
+    size: 10px;
+    color: rgba(0, 0, 0, 0.384);
+    text-decoration: none;
+    padding: 10px;
+    cursor: pointer;
+  
+  }
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 1000; /* Ensure sidebar is above other content */
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: rgba(255, 255, 255, 0);
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #000000;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 36px;
+}
+
+#sidebar-icon {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    margin-left: 107rem;
+    margin-bottom: 2rem;
+    font-size: 40px; /* Make icon larger */
+    color: #ffffffa8;
+    cursor: pointer;
+    z-index: 1001; /* Ensure icon is above other content */
+    background-color: rgb(0, 0, 0);
+    border-radius: 40%;
+    padding: 30px;
+    box-shadow: 0 2px 5px rgb(255, 255, 255);
+    text-align: center;
+    line-height: 30px; /* Center the icon vertically */
+}
+.sidebar-icon a:hover{
+    color: rgb(255, 255, 255);
+}
+#sidebar-icon i {
+    width: 40px;
+    height: 40px;
+}
+.kartu-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between cards */
+}
+
+.kartu {
+    
+    flex: 1; /* Make all cards the same width */
+    max-width: 200px; /* Adjust the size as needed */
+    overflow: hidden;
+    
+}
+
+.kartu__img {
+    width: 100%;
+    height: auto;
+}
+
+.kartu__details {
+    padding: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.content .about {
+    width: 80%; /* Atur lebar sesuai kebutuhan */
+    margin: 0 auto; /* Pusatkan elemen secara horizontal */
+    padding: 1rem; /* Tambahkan padding untuk ruang dalam */
+    box-sizing: border-box; /* Sertakan padding dan border dalam ukuran elemen */
+}
+
+@media (max-width: 768px) {
+    .content {
+        width: 90%; /* Atur lebar yang lebih sesuai untuk layar kecil */
+    }
+}
+
+.content h3{
+    margin-top: 1em;
+    font-size: 25px;
+    display: flex;
+    font-weight: bold;
+}
+
+
+.Pendidikan h4  {
+    margin-top: 2rem;
+    text-align: start;
+    font-size: 25px;
+    font-weight: bold;
+}
+.Pendidikan p {
+    text-align: start; /* Mengatur teks agar mulai dari kanan */
+    margin-right: 40%; /* Memberi ruang kosong sebanyak 40% di sebelah kiri */
+}
+.skillss {
+    margin-left: 2rem;
+    margin-top: 2rem;
+    display: flex; /* Menggunakan flexbox untuk penataan */
+    flex-wrap: wrap; /* Membiarkan elemen membungkus ke baris baru */
+    justify-content: start; /* Pusatkan konten */
+    gap: 15px; /* Jarak antar card */
+    padding: 10px; /* Padding untuk container */
+}
+@media (min-width: 1024px) {
+    .skillss{
+        justify-content: start;
+        margin-left: 7rem;
+
+    }
+}
+.Kemampuann-card {
+    display: flex; /* Flexbox untuk menata isi card */
+    flex-direction: column; /* Menyusun gambar dan judul secara vertikal */
+    align-items: center; /* Memusatkan gambar dan judul */
+    border-radius: 15px; /* Lekukan pada sudut */
+    padding: 10px; /* Padding dalam card */
+    max-width: 150px; /* Maksimal lebar card */
+    text-align: center; /* Memusatkan teks */
+}
+
+.Kemampuann-card img {
+    max-width: 70%; /* Agar gambar tidak melebihi lebar card */
+    height: auto; /* Tinggi otomatis untuk mempertahankan rasio */
+    border-radius: 6px; /* Lekukan pada gambar */
+}
+
+.Kemampuann-card h4 {
+    margin-top: 5px; /* Jarak antara gambar dan judul */
+    font-size: 14px; /* Ukuran font untuk judul */
+    font-weight: normal; /* Gaya font normal */
+}
+
+
+.skillss h4 {
+    text-align: center;
+    font-weight: bold;
+}
+
+.shrink {
+    transform: scale(0.85); /* Mengecilkan elemen lebih lanjut saat dalam kondisi shrink */
+}
+
+/* Media Queries untuk memastikan responsif */
+
+    .skillss img {
+        width: 100px; /* Menyesuaikan ukuran gambar untuk layar kecil */
+    }
+
+
+
+.myskillss h3 {
+    margin-left: 5rem;
+    color: #ffffff;
+    font-size: 3rem;
+    font-style: italic;
+    text-align: start;
+    font-weight: bold;
+
+}
+.myskillss p{
+    margin-left: 5rem;
+    text-align: start;
+    font-weight: 500;
+}
+@media (min-width: 1024px) {
+    .myskillss{
+        justify-content: start;
+        margin-left: 4rem;
+        margin-top: -0.1em;
+
+    }
+}
+/* General Styles */
+.profile {
+    padding: 20px;
+  }
+  
+  .profile h2 {
+    margin-left: 1.59rem ;
+    color: #ffffff;
+    text-align: start;
+    font-size: 2em;
+    margin-bottom: 0.1em;
+    margin-top: 3.5rem;
+  }
+  
+  .profile .content h1 {
+    font-size: 1.5em;
+    margin: 10px 0 10px;
+    margin-left: 2rem;
+  }
+  
+  .profile .content p {
+    font-size: 1em;
+    margin-bottom: 20px;
+    margin-left: 2rem;
+  }
+  
+  /* Adjustments for Tablets and Larger Screens */
+  @media (min-width: 768px) {
+    .profile .content h1 {
+      font-size: 2em;
+    }
+  
+    .profile .content p {
+      font-size: 1.2em;
+    }
+  }
+  
+  /* Adjustments for Laptops and Larger Screens */
+  @media (min-width: 1024px) {
+    .profile {
+        text-align: start;
+      padding: 40px;
+      margin-bottom: 0.1em;
+    }
+    @media (min-width: 1024px) {
+        .profile h2 {
+            text-align: start;
+          padding: 40px;
+          margin-left: 3.5rem;
+        }
+    }    
+  
+    .profile .content h1 {
+      font-size: 1.5rem;
+      margin-left: 6rem;
+     
+    }
+    @media (max-width:1024px) {
+        .profile .content h2 {
+          font-size: 1.2em;
+          margin-left: 20rem;
+        }
+    }    
+  
+    .profile .content p {
+      font-size: 1em;
+      margin-left:6rem ;
+    }
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 767px) {
+    .profile .content h1 {
+      font-size: 1.2em;
+    }
+      
+    .profile .content p {
+      font-size: 0.9em;
+      
+    }
+  }
+  .about .h2 .h3 .p{
+    margin-left: 1rem;
+    text-align: center;
+  }
+  .video-background {
+    position: relative;
+    min-height: 100vh; 
+    height: 100%; 
+  }
+  
+  #background-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    filter: brightness(50%);
+  }
+  
